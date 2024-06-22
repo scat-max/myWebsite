@@ -511,7 +511,7 @@ footer {
 }
 @media screen and (max-width: 400px) {
 	#electrical-work .img-container img {
-		width: 200%;
+		width: 190%;
 		transform: rotate(90deg);
 	}
 }
