@@ -518,6 +518,10 @@ footer {
 		top: -50%;
   		left: 10%;
 	}
+
+	.text-container {
+       		width: 70%; 
+	}
 }
 @media screen and (min-width: 401px) and (max-width: 800px) {
 	#electrical-work .img-container img {
