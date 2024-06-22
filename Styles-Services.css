@@ -1,0 +1,610 @@
+﻿body{
+	font-family: 'Forum', serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	background-color: #0A0A0A;
+	overflow-x: hidden;
+}
+
+.container {
+	width: 80%;
+	margin: 0 auto;
+	position: relative;
+}
+
+header {
+	background-color: #192841;
+	color: #fff;
+	text-align: center;
+	padding: 20px 0;
+	position: relative;
+}
+
+.animation-text {
+	position: absolute;
+	top: 50%;
+	left: 30%;
+	font-family: 'Graphick';
+	font-size: 30px;
+	font-weight: bold;
+	color: #fff;
+	z-index: 1;
+}
+
+
+.click-text {
+	position: absolute;
+	top: 50%;
+	left: 30%;
+	font-family: 'Graphick';
+	font-size: 30px;
+	font-weight: bold;
+	color: #fff;
+	z-index: 2;
+	opacity: 0;
+	cursor: pointer;
+}
+
+.logo-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 2;
+	position: relative;
+}
+
+.logo {
+	max-width: 100px;
+	margin-left: 0px;
+	animation: Slide 2s ease-out forwards;
+}
+
+nav {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	margin-right: 30px;
+}
+
+nav a {
+	color: #fff;
+	text-decoration: none;
+	margin-left: 20px;
+	font-size: 16px;
+	transition: font-size 0.2s, text-decoration 0.2s;
+}
+
+nav a:hover,
+nav a:active {
+	font-size: 120%;
+	text-decoration: underline;
+}
+
+span.separator {
+	position: relative;
+	color: #fff;
+	padding-left: 10px;
+}
+
+@keyframes Slide {
+	0% { 
+		transform: translateX(60%);
+	}
+	100% {
+		transform: translateX(-450%);
+	}
+}
+
+h2 {
+	margin-left: 20px;
+	font-size: 35px;
+	position: relative;
+	display: inline-block;
+	z-index: 0;
+	color: #fff;
+}
+
+h2::after {
+	content: "";
+	display: block;
+	width: 105%;
+	height: 55px;
+	background-color: #192841;
+	position: absolute;
+	top: 0;
+	left: -3px;
+	z-index: -1;
+}
+
+p {
+	text-align: justify;
+	font-size: 20px;
+	color: #fff;
+}
+
+ul {
+	list-style-type: circle;
+	font-size: 20px;
+	color: #fff;
+}
+
+li {
+	margin-bottom: 5px;
+}
+
+.service-section {
+    position: relative;
+    overflow: hidden;
+}
+.content-container {
+    display: flex;
+	flex-direction: column;
+	align-items: center;
+    justify-content: center;
+    text-align: center;
+	position: relative;
+	width: 100%;
+	height: auto;
+}
+.text-container {
+	position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+	width: 45%;
+	text-align: left;
+}
+
+#electrical-work {
+	margin-top: 40px;
+}
+#material-supply {
+	margin-bottom: 70px;
+}
+
+#electrical-work .text-container {
+	top: 0;
+	left: 5%;
+}
+#electromechanic-maintenance .text-container {
+	top: 5%;
+	right: 8%;
+}
+#mechanical-work .text-container {
+	top: 7%;
+	left: 7%;
+}
+#material-supply .text-container {
+	top: 15%;
+	right: 5%;
+}
+.img-container {
+    position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+    justify-content: center;
+    width: 100%;
+	height: auto;
+	text-align: center;
+	margin-bottom: 0;
+}
+.img-container img {
+    width: 100%;
+    height: auto;
+	display: block;
+}
+
+.conceal-electrical,
+.conceal-mechanical {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-color: #0A0A0A;
+	position: absolute;
+	z-index: 4;
+	top: 0;
+	left: 0;
+	transform: translateX(0);
+	transition: transform 1.5s ease;
+}
+.conceal-electrical.show, 
+.conceal-mechanical.show {
+	transform: translateX(100%);
+}
+
+
+.conceal-electromechanic,
+.conceal-supply {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-color: #0A0A0A;
+	position: absolute;
+	z-index: 4;
+	top: 0;
+	left: 0;
+	transform: translateX(0);
+	transition: transform 1.5s ease;
+}
+.conceal-electromechanic.show,
+.conceal-supply.show {
+	transform: translateX(-100%);
+}
+
+footer {
+	background-color: #192841;
+	color: #fff;
+	padding: 30px 0;
+	position: relative;
+	text-align: center; 
+}
+.nav-container {
+	display: flex;
+    justify-content: flex-start;
+    align-items: center; 
+    gap: 20px; 
+    margin: 0 auto;
+	padding-left: 5%;
+}
+
+.link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: text-decoration 0.2s;
+}
+.link:hover,
+.link:active {
+    text-decoration: underline;
+    font-size: 110%;
+}
+
+.separator {
+    font-size: 16px;
+    color: #fff;
+}
+#cookie-banner {
+    position: fixed;
+    bottom: -100%;
+    left: 10px;
+    width: 30%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+	z-index: 5;
+	transition: bottom 1s ease-in-out;
+}
+#cookie-banner.show {
+    bottom: 0; 
+}
+
+#cookie-banner p {
+    margin: 0 10px 10px 10px;
+    font-size: 14px;
+	text-align: justify;
+}
+
+#accept-cookies,
+#decline-cookies {
+    background-color: #008080;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+	font-size: 16px;
+    cursor: pointer;
+    margin: 0 40px;
+}
+#cookie-banner a {
+	color: #1569C7;
+	text-decoration: underline;
+}
+
+@media screen and (max-width: 400px) {
+    html, body {
+        overflow-x: hidden;
+    }
+    header {
+        padding: 10px;
+    }
+    .animation-text {
+        top: 40%;
+        left: 32%;
+        font-size: 16px;
+    }
+    .click-text {
+        top: 40%;
+        left: 32%;
+        font-size: 16px;
+    }
+    .logo {
+        margin-top: 20px;
+        max-width: 70px;
+        animation: Slide 1.1s ease-out forwards;
+    }
+    @keyframes Slide {
+        0% { 
+            transform: translateX(130%);
+        }
+        100% {
+            transform: translateX(-180%);
+        }
+    }
+    
+	.content-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+
+    #cookie-banner {
+        bottom: -100%;
+        left: 10px;
+        width: 50%;
+        height: 130px;
+        padding: 8%;
+        z-index: 6;
+    }
+	#cookie-banner p {
+		font-size: 2.5vw;
+	}
+    
+    #accept-cookies,
+    #decline-cookies {
+        font-size: 11px;
+        padding: 8px 8px;
+        cursor: pointer;
+        margin: 0 10px;
+    }
+    
+    footer {
+        padding: 30px 0;
+    }
+	.nav-container {
+		justify-content: center;
+		gap: 10px;
+		padding-left: 0;
+	}
+}
+
+@media screen and (min-width: 401px) and (max-width: 600px) {
+    html, body {
+        overflow-x: hidden;
+    }
+    header {
+        padding: 10px;
+    }
+    .animation-text {
+        top: 40%;
+        left: 38%;
+        font-size: 16px;
+    }
+    .click-text {
+        top: 40%;
+        left: 32%;
+        font-size: 16px;
+    }
+    .logo {
+        margin-top: 20px;
+        max-width: 70px;
+        animation: Slide 1.1s ease-out forwards;
+    }
+    @keyframes Slide {
+        0% { 
+            transform: translateX(140%);
+        }
+        100% {
+            transform: translateX(-190%);
+        }
+    }
+
+	.content-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    
+    #cookie-banner {
+        bottom: -100%;
+        left: 10px;
+        width: 220px;
+        height: 120px;
+        padding: 10px;
+        z-index: 6;
+    }
+    #cookie-banner p {
+        margin: 0 3px 8px 3px;
+        font-size: 11px;
+    }
+    #accept-cookies,
+    #decline-cookies {
+        font-size: 11px;
+        padding: 8px 8px;
+        cursor: pointer;
+        margin: 0 10px;
+    }
+    
+    footer {
+        padding: 30px 0;
+    }
+
+	.nav-container {
+		justify-content: center;
+		gap: 10px;
+		padding-left: 0;
+	}
+}
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    html, body {
+        overflow-x: hidden;
+    }
+    header {
+        padding: 10px;
+    }
+    .animation-text {
+        top: 40%;
+        left: 35%;
+        font-size: 27px;
+    }
+    .click-text {
+        top: 40%;
+        left: 35%;
+        font-size: 27px;
+    }
+    .logo {
+        margin-top: 20px;
+        max-width: 90px;
+        animation: Slide 1.1s ease-out forwards;
+    }
+    @keyframes Slide {
+        0% { 
+            transform: translateX(140%);
+        }
+        100% {
+            transform: translateX(-260%);
+        }
+    }
+
+    
+    #cookie-banner {
+        position: fixed;
+        bottom: -100%;
+        left: 10px;
+        width: 350px;
+        height: 90px;
+        padding: 10px;
+        z-index: 6;
+        transition: bottom 1s ease-in-out;
+    }
+    #cookie-banner.show {
+        bottom: 0; 
+    }
+    #cookie-banner p {
+        margin: 0 3px 8px 3px;
+        font-size: 11px;
+    }
+    #accept-cookies,
+    #decline-cookies {
+        font-size: 11px;
+        padding: 8px 8px;
+        cursor: pointer;
+        margin: 0 10px;
+    }
+    
+    footer {
+        padding: 30px 0;
+    }
+
+    .nav-container {
+		justify-content: flex-start;
+		gap: 20px;
+		padding-left: 5%;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	#electrical-work .img-container img {
+		width: 170%;
+		transform: rotate(90deg);
+	}
+	#electromechanic-maintenance .img-container img {
+		transform: rotate(-90deg);
+		width: 180%;
+	}
+	#mechanical-work .img-container img {
+        transform: rotate(90deg);
+		width: 210%;
+		margin-left: 8%;
+    }
+	#material-supply .img-container img {
+        transform: rotate(-90deg);
+		width: 330%;
+		margin-right: 10%;
+	}
+	.text-container {
+        width: 65%; 
+        margin: 20px auto;
+		text-align: left;
+	}
+	
+	#electrical-work .text-container,
+    #mechanical-work .text-container {
+        left: 0;
+        right: 0;
+    }
+
+    #electromechanic-maintenance .text-container,
+    #material-supply .text-container {
+        right: 0;
+        left: 0;
+	}
+
+	#electrical-work .text-container {
+		top: -55%;
+	}
+	#electromechanic-maintenance .text-container {
+		top: -50%;
+	}
+	#mechanical-work .text-container {
+		top: -50%;
+	}
+	#material-supply .text-container {
+		top: -100%;
+	}
+	
+	p {
+		font-size: 2.6vw;
+	}
+	ul {
+		font-size: 2.6vw;
+	}
+	
+}
+
+@media screen and (min-width: 525px) and (max-width: 600px) {
+	p {
+		font-size: 2.5vw;
+	}
+	ul {
+		font-size: 2.5vw;
+		margin-top: 0px;
+	}
+}
+@media screen and (min-width: 401px) and (max-width: 524px) {
+	p {
+		font-size: 2.4vw;
+	}
+	ul {
+		font-size: 2.4vw;
+		margin-top: 0px;
+	}
+	h2 {
+		font-size: 5vw;
+	}
+	h2::after {
+		height: 120%;
+	}
+}
+@media screen and (max-width: 400px) {
+	p {
+		font-size: 2.4vw;
+	}
+	ul {
+		font-size: 2.4vw;
+		margin-top: 0px;
+	}
+	h2 {
+		font-size: 5vw;
+	}
+	h2::after {
+		height: 120%;
+	}
+}
